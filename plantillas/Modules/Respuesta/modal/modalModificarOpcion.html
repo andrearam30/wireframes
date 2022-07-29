@@ -1,0 +1,31 @@
+<div class="modal fade" id="modalModificarOpcion" tabindex="-1" role="dialog">
+    <div class="modal-dialog " role="document" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modificar Opción</h4>
+        </div>
+        <div class="modal-body">
+        <div class="container-fluid">
+            <div class="row" style="margin-bottom: 20px;">
+                <div class="col">
+                   <div ng-class="mapErroresOpciones.get('opcionModificar').error && 'has-error'">
+                       <label class="label-form"> Opción: <span class="obligatorio">
+                           *</span></label>
+   
+                   <input ng-model="opcionModificar.descripcion" class="form-control" ng-change="changeModalOpcionModificar()" />
+                   <span ng-if="mapErroresOpciones.get('opcionModificar').error" class="span-error"
+                   ng-bind="mapErroresOpciones.get('opcionModificar').mensaje"></span>
+                   </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-utez-success" ng-click="guardarModificacionOpcion()" ng-disabled="isModificarOpcion">Guardar</button>
+          <button type="button" class="btn btn-utez-secondary" data-dismiss="modal">Cerrar</button>
+         
+        </div>
+      </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+  </div><!-- /.modal style="margin-top: 15%;"-->

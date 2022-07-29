@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html ng-app="enes" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/sweetalert.css">
+
+
+    <title>WIREFRAMES</title>
+
+</head>
+
+<body ng-controller="seccion">
+
+    <div ng-include="'./plantillas/encabezado.html'"></div>
+
+    <div class="container-fluid">
+
+        <div class="panel panel-default ">
+            <div class="panel-heading panel-header">
+                <span class="panel-title">Gestión de secciones de encuestas </span>
+            </div>
+            <div class="panel-body">
+
+                <div id="exTab2">
+                    <ul class="nav nav-tabs">
+                        <li class="active">
+                            <a href="#1" id="tabConsulta" data-toggle="tab" ng-show="bloqueoTab">Secciones</a>
+                        </li>
+                        <li><a href="#2" id="tabRegistro" data-toggle="tab" ng-show="bloqueoTab">Registro</a>
+                        </li>
+                        <li><a href="#3" id="tabModificar" data-toggle="tab" ng-show="visible">Modificar</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content" style="margin-top: 20px;">
+                        <div class="tab-pane active" id="1" ng-include="'./plantillas/Modules/Seccion/seccion.html'">
+                            
+                        </div>
+
+                        <div class="tab-pane  " id="2" ng-include="'./plantillas/Modules/Seccion/registro.html'">
+                        </div>
+
+                        <div class="tab-pane" id="3" ng-include="'./plantillas/Modules/Seccion/modificar.html'">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+    <script src="./js/angular.js"></script>
+    <script src="./js/angular-sortable.js"></script>
+    <script src="./js/sweetalert.js"></script>
+    <script src="./js/Sweetalert2.js"></script>
+    <script src="./js/angular-view.js"></script>
+    <script src="./app.js"></script>
+    <script src="./js/modules/seccion/factorySeccion.js"></script>
+    <script src="./js/modules/seccion/seccion.js"></script>
+    <script>
+        feather.replace()
+    </script>
+    <script src="./js/smart-table.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
